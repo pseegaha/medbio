@@ -1,4 +1,51 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Medbio Collective</title>
+
+
+    
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+   <style>
+    @media screen and (min-width: 1000px) {
+        .modal-dialog {
+          max-width: 1000px; /* New width for default modal */
+        }
+    }
+</style>  
+    
+<script>
+	$(document).ready(function(){
+		$("#myModal").modal('show');
+	});
+</script>
+   
+</head>
+<body>
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center" >
+                <h5 class="modal-title w-100">About Medbio Project</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form style="text-align:left">
+				<p style="text-align:justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The genomics revolution in biology will underlie the practice of medicine in the 21st Century. The MedBio Project is an exemplar of this concept as the project seeks to collect biospecimens from humans that are being used to generate information on human genetics through sequencing of the human genome, and the microbiome through sequencing and establishing profiles of microbial composition that can be integrated with electronic health records and other clinical data. By crowdsourcing across UPMC and University of Pittsburgh investigators, MedBio brings together a wide variety of patient registries and clinical investigations and carefully characterized patient phenotypes that can be associated with these biospecimens and their genomic and microbiome information. Participants in MedBio represent a wide variety of disease phenotypes including: chronic obstructive pulmonary disease (COPD), pulmonary hypertension, inflammatory bowel disease (IBD), cancer, renal disease and autoimmune disorders. </p>
+<p style="text-align:justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As part of the MedBio v2.0 collection, 4,735 specimens (mostly stool or oral) from 2,952 participants have been sequenced for microbial taxonomic composition using 16S rRNA gene sequencing. Approximately 1,480 human genomes have been sequenced with over 760 individuals having both a human genome and microbiome sequence. 
+</p>
+                
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+    <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 
@@ -8,7 +55,9 @@
 
 
 
-<title>13@Public_Medbio_Investigators_Dashboard_2.0_Collective-1</title>
+<title>Medbio_Dashboard_2.0_Collective</title>
+    
+    
 
 <meta property="og:title" content="13@Public_Medbio_Investigators_Dashboard_2.0_Collective-1" />
 
@@ -45,7 +94,62 @@ window.FlexDashboardComponents = [];
 <script src="libs/tippyjs-3.2.0/tippy.all.min.js"></script>
 <script src="libs/tippy-binding-0.1.0/tippy.js"></script>
 <style type="text/css">
+.flier {
+	pointer-events: none;
+}
 
+.flier > * {
+/* Adjust animation duration to change the element’s speed */
+        animation: fly 50s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 1s;
+	z-index: 999999;
+}
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes fly {
+
+	98.001%, 0% {
+                display: block;
+		transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+	}
+
+	15% {
+		transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+	}
+
+	15.001%, 18% {
+		transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+	}
+
+	40% {
+		transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+	}
+
+	40.001%, 43% {
+		transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+	}
+
+	65% {
+		transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+	}
+
+	65.001%, 68% {
+		transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+	}
+
+	95% {
+		transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+	}
+}
 /*
  Dashboard CSS from Keen IO Dashboards
  (https://github.com/keen/dashboards)
@@ -2731,7 +2835,8 @@ window.FlexDashboardComponents.push({
   }
 });
 </script>
-
+    
+    
 <div id="dashboard-container">
 
 <div id="row" class="section level2 charts-only" data-height="17">
@@ -2750,7 +2855,9 @@ window.FlexDashboardComponents.push({
 <h3></h3>
 <div class="markdown-note-content">
 <center>
+    <a href="https://www.microbiome.pitt.edu/contact-us/">
 <img src="libs/exploratory/images/p1.png" alt="Medbio Collective 2.0" width="500" />
+         </a>
 </center>
 </div>
 </div>
@@ -2826,6 +2933,7 @@ window.FlexDashboardComponents.push({
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
+    
 <p><span style="&#10;font: italic small-caps bold 12px/12px Georgia;font-style: italic;font-family: Arial, Helvetica, sans-serif;&#10;color: rgb(73, 74, 82);">Subjects With &gt;1 Timepoint</span><div style="float:left;display:flex;">
 <span id="htmlwidget-4e4d5d155355ad0692ad" class="tippy html-widget" width="960" height="500"></span>
 <script type="application/json" data-for="htmlwidget-4e4d5d155355ad0692ad">{"x":{"opts":{"placement":"bottom","content":"552 (Subjects With > 1 Timepoint): Number of subjects available for longitudinal analyses"},"text":"<span style=\"font-size: 40px;&#10;display:inline;&#10;color: rgb(229, 50, 59);&#10;    line-height: 1.2em;&#10;    font-weight: bold;&#10;    margin-bottom: 5px;&#10;    white-space: nowrap;&#10;    overflow: hidden;&#10;    display: block;&#10;    text-overflow: ellipsis;font-family: Arial, Helvetica, sans-serif;\">\n  552\n  <i class=\"glyphicon glyphicon-info-sign\" style=\"color: rgb(77, 77, 77);font-size: 12px\"><\/i>\n<\/span>"},"evals":[],"jsHooks":[]}</script>
@@ -3402,4 +3510,7 @@ $(document).ready(function () {
 </script>
 
 </body>
+</html>
+
+    
 </html>
